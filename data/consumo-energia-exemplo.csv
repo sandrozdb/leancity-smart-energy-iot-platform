@@ -1,0 +1,11 @@
+data_hora,presenca,luminosidade,temperatura,consumo_energetico,status_iluminacao,status_alerta
+2026-06-20 08:00:00,Sim,1200,24.5,1500,Ligada,Normal
+2026-06-20 08:05:00,Sim,1350,25.0,1600,Ligada,Normal
+2026-06-20 08:10:00,Sim,2200,25.8,1400,Desligada,Normal
+2026-06-20 08:15:00,Nao,1600,26.2,900,Desligada,Normal
+2026-06-20 08:20:00,Nao,1500,26.5,850,Desligada,Normal
+2026-06-20 08:25:00,Sim,1100,27.0,1800,Ligada,Normal
+2026-06-20 08:30:00,Sim,1000,28.5,3200,Ligada,Alerta
+2026-06-20 08:35:00,Sim,950,29.0,3500,Ligada,Alerta
+2026-06-20 08:40:00,Nao,1800,28.2,1200,Desligada,Normal
+2026-06-20 08:45:00,Sim,2400,27.4,1300,Desligada,Normal
