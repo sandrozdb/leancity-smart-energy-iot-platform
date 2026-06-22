@@ -1,0 +1,247 @@
+{
+"version": 1,
+"author": "Sandro Ferreira",
+"editor": "wokwi",
+"parts": [
+{
+"type": "wokwi-esp32-devkit-v1",
+"id": "esp32",
+"top": 0,
+"left": 0,
+"attrs": {}
+},
+{
+"type": "wokwi-pir-motion-sensor",
+"id": "pir1",
+"top": -140,
+"left": 230,
+"attrs": {}
+},
+{
+"type": "wokwi-potentiometer",
+"id": "pot_luminosidade",
+"top": 80,
+"left": 260,
+"attrs": {
+"value": "1200"
+}
+},
+{
+"type": "wokwi-potentiometer",
+"id": "pot_temperatura",
+"top": 210,
+"left": 260,
+"attrs": {
+"value": "2500"
+}
+},
+{
+"type": "wokwi-potentiometer",
+"id": "pot_consumo",
+"top": 340,
+"left": 260,
+"attrs": {
+"value": "1500"
+}
+},
+{
+"type": "wokwi-led",
+"id": "led_iluminacao",
+"top": -120,
+"left": -190,
+"attrs": {
+"color": "yellow"
+}
+},
+{
+"type": "wokwi-resistor",
+"id": "res_led",
+"top": -80,
+"left": -140,
+"attrs": {
+"value": "220"
+}
+},
+{
+"type": "wokwi-buzzer",
+"id": "buzzer_alerta",
+"top": 50,
+"left": -200,
+"attrs": {}
+},
+{
+"type": "wokwi-relay-module",
+"id": "relay_carga",
+"top": 190,
+"left": -230,
+"attrs": {}
+}
+],
+"connections": [
+[
+"esp32:3V3",
+"pir1:VCC",
+"red",
+[
+"h90",
+"v-100"
+]
+],
+[
+"esp32:GND.1",
+"pir1:GND",
+"black",
+[
+"h100",
+"v-90"
+]
+],
+[
+"esp32:D4",
+"pir1:OUT",
+"green",
+[
+"h120",
+"v-80"
+]
+],
+[
+"esp32:D34",
+"pot_luminosidade:SIG",
+"green",
+[
+"h120"
+]
+],
+[
+"esp32:3V3",
+"pot_luminosidade:VCC",
+"red",
+[
+"h130"
+]
+],
+[
+"esp32:GND.1",
+"pot_luminosidade:GND",
+"black",
+[
+"h140"
+]
+],
+[
+"esp32:D35",
+"pot_temperatura:SIG",
+"green",
+[
+"h120"
+]
+],
+[
+"esp32:3V3",
+"pot_temperatura:VCC",
+"red",
+[
+"h130"
+]
+],
+[
+"esp32:GND.1",
+"pot_temperatura:GND",
+"black",
+[
+"h140"
+]
+],
+[
+"esp32:D32",
+"pot_consumo:SIG",
+"green",
+[
+"h120"
+]
+],
+[
+"esp32:3V3",
+"pot_consumo:VCC",
+"red",
+[
+"h130"
+]
+],
+[
+"esp32:GND.1",
+"pot_consumo:GND",
+"black",
+[
+"h140"
+]
+],
+[
+"esp32:D2",
+"res_led:1",
+"green",
+[
+"h-80"
+]
+],
+[
+"res_led:2",
+"led_iluminacao:A",
+"green",
+[
+"h-40"
+]
+],
+[
+"led_iluminacao:C",
+"esp32:GND.2",
+"black",
+[
+"v80",
+"h120"
+]
+],
+[
+"esp32:D5",
+"buzzer_alerta:1",
+"green",
+[
+"h-90"
+]
+],
+[
+"buzzer_alerta:2",
+"esp32:GND.2",
+"black",
+[
+"h100"
+]
+],
+[
+"esp32:D18",
+"relay_carga:IN",
+"green",
+[
+"h-100"
+]
+],
+[
+"esp32:5V",
+"relay_carga:VCC",
+"red",
+[
+"h-100"
+]
+],
+[
+"esp32:GND.2",
+"relay_carga:GND",
+"black",
+[
+"h-100"
+]
+]
+],
+"dependencies": {}
+}
