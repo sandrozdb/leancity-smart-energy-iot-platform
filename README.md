@@ -22,6 +22,12 @@ flowchart TD
     B --> G[Indicadores e alertas]
 ```
 
+## Arquitetura demonstrativa
+
+![Arquitetura demonstrativa do LeanCity](assets/arquitetura-demonstrativa.svg)
+
+O visual representa o que já está implementado no firmware: quatro entradas, processamento local no ESP32 e respostas por LED, relé, buzzer e monitor serial. As leituras analógicas são simuladas e o projeto ainda não possui nuvem ou dashboard conectado.
+
 ## Regras demonstradas
 
 - desligar iluminação sem presença;
@@ -68,6 +74,7 @@ pio device monitor
 ├── src/main.cpp          # regras e leitura dos sensores
 ├── platformio.ini        # ambiente de compilação
 ├── assets/cover.svg
+├── assets/arquitetura-demonstrativa.svg
 ├── .github/workflows/    # validação automática
 └── README.md
 ```
@@ -87,7 +94,7 @@ O GitHub Actions compila o firmware em cada PR e atualização da `main`, ajudan
 
 ## Próximos passos
 
-- adicionar captura da simulação;
+- montar o circuito em um simulador e registrar sua execução;
 - conectar o protótipo a uma plataforma em nuvem;
 - coletar dados reais de consumo;
 - criar dashboard de indicadores;
