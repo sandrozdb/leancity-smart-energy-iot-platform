@@ -1,3 +1,23 @@
+<p align="center"><img src="assets/cover.svg" alt="LeanCity - eficiência energética com IoT" width="100%"></p>
+
+## 🔎 Resumo executivo
+
+Protótipo de cidade inteligente que usa sensores e automação para reduzir desperdícios de energia. O ESP32 interpreta presença, luminosidade, temperatura e consumo para decidir quando acionar cargas e alertas.
+
+**Diferenciais:** lógica embarcada clara, foco em sustentabilidade, compilação automática e arquitetura preparada para expansão com nuvem e dashboards.
+
+### Indicadores recomendados
+
+| Indicador | O que demonstra |
+| --- | --- |
+| Consumo antes e depois da automação | Economia potencial |
+| Tempo de carga ligada sem presença | Desperdício evitável |
+| Quantidade de alertas de consumo | Ocorrências fora do limite |
+| Disponibilidade do sistema | Confiabilidade operacional |
+| Consumo médio por ambiente | Comparação e priorização |
+
+> Os indicadores orientam um futuro piloto físico; não são apresentados resultados numéricos sem coleta real.
+
 # 🏙️ LeanCity — Sistema de Eficiência Energética com IoT
 
 ## 📌 Sobre o Projeto
