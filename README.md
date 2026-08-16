@@ -198,3 +198,25 @@ Estudante de Inteligência Artificial e Automação Digital
 E-mail: [sandrozdb@gmail.com](mailto:sandrozdb@gmail.com)
 LinkedIn: https://linkedin.com/in/sandrozdb
 GitHub: https://github.com/sandrozdb
+
+---
+
+## ▶️ Como Executar
+
+1. Instale o VS Code e a extensão PlatformIO.
+2. Abra a pasta do projeto.
+3. Conecte uma placa ESP32 ou configure o ambiente de simulação.
+4. Execute **PlatformIO: Build**.
+5. Faça o upload e abra o monitor serial em `115200` baud.
+
+Pelo terminal:
+
+```bash
+pio run
+pio run --target upload
+pio device monitor
+```
+
+## ✅ Qualidade
+
+O workflow de GitHub Actions compila o firmware automaticamente em cada pull request e atualização da `main`, ajudando a detectar erros antes da publicação.
