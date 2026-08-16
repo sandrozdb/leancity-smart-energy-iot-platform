@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="900" viewBox="0 0 1536 900" role="img" aria-labelledby="title desc">
+  <title id="title">Arquitetura demonstrativa LeanCity</title>
+  <desc id="desc">Fluxo do protótipo ESP32 com sensores de presença, luminosidade, temperatura e consumo, regras embarcadas e saídas por LED, relé, buzzer e monitor serial.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111f"/><stop offset="1" stop-color="#102840"/></linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#17d492"/><stop offset="1" stop-color="#48e0b0"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity=".28"/></filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 12 6 0 12z" fill="#4fe0b1"/></marker>
+    <style>
+      .title{font:700 48px Arial,sans-serif;fill:#f7fbff}.sub{font:24px Arial,sans-serif;fill:#a9bdd0}.section{font:700 19px Arial,sans-serif;letter-spacing:2px;fill:#57e4b7}.card{fill:#14263a;stroke:#31506c;stroke-width:2}.ct{font:700 23px Arial,sans-serif;fill:#f8fbff}.cb{font:18px Arial,sans-serif;fill:#afc2d4}.small{font:16px Arial,sans-serif;fill:#8fa7bc}.rule{font:18px Arial,sans-serif;fill:#d9e7f2}.chip{fill:#0b1828;stroke:#4fe0b1;stroke-width:3}.chiptitle{font:700 34px Arial,sans-serif;fill:#fff}.chipbody{font:18px Arial,sans-serif;fill:#b8ccdd}.badge{font:700 16px Arial,sans-serif;fill:#06131e}.foot{font:16px Arial,sans-serif;fill:#8fa7bc}.line{fill:none;stroke:#4fe0b1;stroke-width:4;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1536" height="1000" fill="url(#bg)"/>
+  <circle cx="1390" cy="90" r="180" fill="#17d492" opacity=".06"/><circle cx="120" cy="920" r="210" fill="#3e8cff" opacity=".05"/>
+  <text x="72" y="80" class="title">LeanCity — Energia Inteligente com IoT</text>
+  <text x="72" y="120" class="sub">Arquitetura demonstrativa baseada nas regras implementadas no firmware</text>
+  <rect x="1265" y="52" width="198" height="52" rx="26" fill="url(#green)"/><text x="1364" y="85" text-anchor="middle" class="badge">ESP32 + PlatformIO</text>
+
+  <text x="72" y="190" class="section">ENTRADAS</text><text x="650" y="190" class="section">DECISÃO LOCAL</text><text x="1080" y="190" class="section">RESPOSTAS</text>
+  <path d="M490 337 C560 337 570 367 640 367" class="line"/><path d="M490 527 C560 527 570 477 640 477" class="line"/>
+  <path d="M490 717 C560 717 570 587 640 587" class="line"/>
+  <path d="M896 377 C970 377 980 337 1050 337" class="line"/><path d="M896 487 C970 487 980 527 1050 527" class="line"/><path d="M896 597 C970 597 980 717 1050 717" class="line"/>
+
+  <g filter="url(#shadow)"><rect x="72" y="220" width="418" height="145" rx="22" class="card"/><circle cx="125" cy="273" r="25" fill="#3e8cff"/><path d="M113 276h24M125 264v24" stroke="white" stroke-width="4"/><text x="170" y="270" class="ct">Presença</text><text x="170" y="301" class="cb">Sensor digital • GPIO 4</text><text x="98" y="337" class="small">Identifica ocupação do ambiente</text></g>
+  <g filter="url(#shadow)"><rect x="72" y="390" width="418" height="145" rx="22" class="card"/><circle cx="125" cy="443" r="25" fill="#ffc857"/><circle cx="125" cy="443" r="9" fill="white"/><path d="M125 423v-10M125 473v-10M105 443H95M155 443h-10" stroke="white" stroke-width="3"/><text x="170" y="440" class="ct">Luminosidade</text><text x="170" y="471" class="cb">Entrada analógica • GPIO 34</text><text x="98" y="507" class="small">Limite no firmware: 1800</text></g>
+  <g filter="url(#shadow)"><rect x="72" y="560" width="418" height="145" rx="22" class="card"/><circle cx="125" cy="613" r="25" fill="#ff6b6b"/><path d="M125 595v28a10 10 0 1 0 10 10c0-5-4-9-10-10" fill="none" stroke="white" stroke-width="4"/><text x="170" y="610" class="ct">Temperatura</text><text x="170" y="641" class="cb">Entrada analógica • GPIO 35</text><text x="98" y="677" class="small">Alerta no firmware: acima de 2800</text></g>
+  <g filter="url(#shadow)"><rect x="72" y="730" width="418" height="145" rx="22" class="card"/><circle cx="125" cy="783" r="25" fill="#a87cff"/><path d="M129 762l-16 24h13l-5 19 18-27h-13z" fill="white"/><text x="170" y="780" class="ct">Consumo simulado</text><text x="170" y="811" class="cb">Entrada analógica • GPIO 32</text><text x="98" y="847" class="small">Alerta no firmware: acima de 3000</text></g>
+
+  <g filter="url(#shadow)"><rect x="640" y="250" width="256" height="445" rx="30" class="chip"/><rect x="686" y="294" width="164" height="92" rx="14" fill="url(#green)"/><text x="768" y="350" text-anchor="middle" class="chiptitle">ESP32</text><text x="768" y="420" text-anchor="middle" class="chipbody">Leitura a cada 3 s</text><line x1="683" y1="448" x2="853" y2="448" stroke="#31506c"/><text x="672" y="486" class="rule">1. Presença + pouca luz</text><text x="692" y="514" class="small">→ liga LED e relé</text><text x="672" y="558" class="rule">2. Consumo elevado</text><text x="692" y="586" class="small">→ aciona buzzer</text><text x="672" y="630" class="rule">3. Temperatura elevada</text><text x="692" y="658" class="small">→ alerta no serial</text></g>
+
+  <g filter="url(#shadow)"><rect x="1050" y="220" width="414" height="145" rx="22" class="card"/><circle cx="1104" cy="273" r="25" fill="#ffc857"/><path d="M1094 286h20v-9c0-9-4-16-10-16s-10 7-10 16z" fill="white"/><text x="1148" y="270" class="ct">Iluminação</text><text x="1148" y="301" class="cb">LED • GPIO 2</text><text x="1077" y="337" class="small">Liga somente quando necessário</text></g>
+  <g filter="url(#shadow)"><rect x="1050" y="390" width="414" height="145" rx="22" class="card"/><circle cx="1104" cy="443" r="25" fill="#3e8cff"/><path d="M1092 431h24v24h-24zM1097 426v5M1111 426v5" fill="none" stroke="white" stroke-width="3"/><text x="1148" y="440" class="ct">Controle de carga</text><text x="1148" y="471" class="cb">Relé • GPIO 18</text><text x="1077" y="507" class="small">Acompanha a regra de iluminação</text></g>
+  <g filter="url(#shadow)"><rect x="1050" y="560" width="414" height="145" rx="22" class="card"/><circle cx="1104" cy="613" r="25" fill="#ff6b6b"/><path d="M1094 619h20l-3-5v-8c0-5-3-9-7-9s-7 4-7 9v8z" fill="white"/><text x="1148" y="610" class="ct">Alerta de consumo</text><text x="1148" y="641" class="cb">Buzzer • GPIO 5</text><text x="1077" y="677" class="small">Sinaliza consumo acima do limite</text></g>
+  <g filter="url(#shadow)"><rect x="1050" y="730" width="414" height="145" rx="22" class="card"/><circle cx="1104" cy="783" r="25" fill="#17d492"/><path d="M1091 773h26v20h-26zM1095 798h18" fill="none" stroke="white" stroke-width="3"/><text x="1148" y="780" class="ct">Monitor serial</text><text x="1148" y="811" class="cb">115200 baud</text><text x="1077" y="847" class="small">Registra leituras, estados e alertas</text></g>
+
+</svg>
