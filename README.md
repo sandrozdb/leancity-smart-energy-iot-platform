@@ -26,7 +26,7 @@ flowchart TD
 
 ![Arquitetura demonstrativa do LeanCity](assets/arquitetura-demonstrativa.svg)
 
-O visual representa o que já está implementado no firmware: quatro entradas, processamento local no ESP32 e respostas por LED, relé, buzzer e monitor serial. As leituras analógicas são simuladas e o projeto ainda não possui nuvem ou dashboard conectado.
+O visual representa o que já está implementado no firmware: quatro entradas, processamento local no ESP32 e respostas por LED, relé, buzzer e monitor serial. As leituras analógicas, a etapa de nuvem e o dashboard são representados como partes simuladas ou planejadas do protótipo; a demonstração executável concentra-se nas regras embarcadas do ESP32.
 
 ## Regras demonstradas
 
