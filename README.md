@@ -24,7 +24,7 @@ flowchart TD
 
 ## Arquitetura demonstrativa
 
-![Arquitetura demonstrativa do LeanCity](assets/arquitetura-demonstrativa.svg)
+![Arquitetura demonstrativa do LeanCity](assets/arquitetura-leancity.svg)
 
 O visual representa o que já está implementado no firmware: quatro entradas, processamento local no ESP32 e respostas por LED, relé, buzzer e monitor serial. As leituras analógicas, a etapa de nuvem e o dashboard são representados como partes simuladas ou planejadas do protótipo; a demonstração executável concentra-se nas regras embarcadas do ESP32.
 
@@ -74,7 +74,7 @@ pio device monitor
 ├── src/main.cpp          # regras e leitura dos sensores
 ├── platformio.ini        # ambiente de compilação
 ├── assets/cover.svg
-├── assets/arquitetura-demonstrativa.svg
+├── assets/arquitetura-leancity.svg
 ├── .github/workflows/    # validação automática
 └── README.md
 ```
